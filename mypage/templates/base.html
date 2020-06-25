@@ -1,0 +1,47 @@
+{% load static %}
+  <head>
+    <!-- google fonts 
+<!doctype html>
+<html lang="en">
+    <link rel="stylesheet" href="stack.css">
+    -->
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap">
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'myresume/css/base.css'%}">
+    <script src="https://kit.fontawesome.com/f391865143.js" crossorigin="anonymous"></script>
+  </head>
+    <div class="container"><!--"container"-->
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="text-muted" href="#"></a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="{% url 'index' %}">Jihyeon</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="text-muted" href="#"></a>
+      </div>
+    </div>
+  </header>
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex">
+      <a class="p-2 text-muted" href="{% url 'main' %}">Main</a>
+      <a class="p-2 text-muted" href="{% url 'profile' %}">Profile</a>
+      <a class="p-2 text-muted" href="{% url 'stackMain' %}">Documents</a>
+    </nav>
+  </div>
+    </div> <!--"container"-->
+{% block content %}
+
+{% endblock %}
+<footer class="blog-footer mt-auto py-3">
+    <p>Copyright 2020, by <a href="https://github.com/jihyeon001">@Jihyeon-jeon</a>.</p>
+</footer>
+</html>

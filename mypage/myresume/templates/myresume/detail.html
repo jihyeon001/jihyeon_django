@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+<title> {{stack_detail.title}} </title>
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <div class="blog-post">
+        <div class="text-right" style="height:5px">
+          <a class="btn btn-sm btn-outline-secondary" href="{% url 'stackMain' %}">&nbsp;&nbsp; Back &nbsp;&nbsp;</a>
+        </div>
+        <h2 class="blog-post-title">{{stack_detail.title}}</h2>
+        <p class="blog-post-meta">{{ stack_detail.pub_date }}</p>
+        <hr>
+        <br>
+        {{ stack_detail.body | safe }}
+      </div><!--'stack-post' -->
+
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Back to top</a>
+      </nav>
+
+      <!-- Comments Form -->
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="card-body">
+          <form method="POST">
+              {% csrf_token %}
+              <div class="form-group">Comment<a style="color:ffffff;">{{ comment_form }}</a></div>
+              <button type="submit" class="btn btn-outline-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+       {% for comment in comments.all %}
+      <div class="media mb-4"><!-- Single Comment -->
+        <div class="media-body">
+            <a class="card-text">{{ comment.comment_textfield }}</a>
+            <a class="p-2 text-muted" style="font-size:70%">{{ comment.comment_date }}</a>
+            <hr>
+        </div>
+      </div><!-- Single Comment -->
+        {% endfor %}
+    </div><!--'stack-main' -->
+   
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">About</h4>
+        <p class="mb-0">These are the materials that I organized while studying <b><em>Programming Languages, Machine learning, Web, Certificate.</em></b> For readability, I have uploaded it with as much simplicity as possible.</p>
+      </div>
+      <div class="p-4">
+        <h4 class="font-italic">Archives</h4>
+        <ol class="list-unstyled mb-0">
+          {% for stack in stack %}
+          <li><a href="{% url 'detail' stack.id %}">{{ stack.title }}</a></li>
+          {% endfor %}
+        </ol>
+      </div>
+      <div class="p-4">
+        <h4 class="font-italic">Elsewhere</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ol>
+      </div>
+    </aside><!-- /.stack-sidebar -->
+  </div><!--'row' -->
+</main>
+{% endblock %}
+
+
+    

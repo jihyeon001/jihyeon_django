@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<title> {{stack_detail.title}} </title>
+<main role="main" class="container">
+  <div class="row">
+    
+    <div class="col-md-8 blog-main">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 style="font-family: 'Noto Sans KR';">전지현</h3>
+          <div class="mb-1 text-muted">1991년 9월 25일(30세) | 남 | <span style ="color:rgb(255,0,0)">신입</span> | 재직중</div>
+          <br>
+          <p class="card-text mb-auto">
+          <i class="fas fa-map-marker-alt" style="font-size:17px;"></i> &nbsp;부산광역시 부산진구 중앙대로 981, 703호 <br>
+          <i class="fas fa-mobile-alt" style="font-size:17px;"></i>&nbsp;&nbsp; 010-2512-9030<br>
+          <i class="far fa-envelope" style="font-size:17px;"></i>&nbsp;&nbsp;jihyeon001@naver.com</p>
+          <a href="https://common-ground.tistory.com/">티스토리 블로그</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="{% static 'images/myprofile.jpg'%}" width="190" height="250"></img>
+        </div>
+      </div>
+
+      <div class="blog-post">
+        <h3 style="font-family: 'Noto Sans KR';"><b>&nbsp;학력</b></h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">재학기간</th>
+              <th scope="col">구분</th>
+              <th scope="col">학교명</th>
+              <th scope="col">전공</th>
+              <th scope="col">학점</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2010 ~ 2015</td>
+              <td>중퇴&nbsp;</td>
+              <td>동아대학교</td>
+              <td>전기공학과</td>
+              <td>3.7/4.5</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <br>
+        <h3 style="font-family: 'Noto Sans KR';"><b>&nbsp;경력</b></h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">기간</th>
+              <th scope="col">사명</th>
+              <th scope="col">직책</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2016.08 ~ 재직중</td>
+              <td>Benz 스타자동차</td>
+              <td>제품전문가</td>
+            </tr>
+            <tr>
+              <td>2014.03 ~ 2014.12</td>
+              <td>부산학원</td>
+              <td>고등부 수학강사</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <br>
+        <h4 style="font-family: 'Noto Sans KR';"><b>&nbsp;자격/어학/수상내역</b></h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">취득/수상일</th>
+              <th scope="col">구분</th>
+              <th scope="col">내용</th>
+              <th scope="col">결과</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2020.06</td>
+              <td>자격</td>
+              <td>정보처리기사</td>
+              <td>필기합격</td>
+            </tr>
+            <tr>
+              <td>2019.12</td>
+              <td>어학</td>
+              <td>TOEIC</td>
+              <td>775점</td>
+            </tr>
+            <tr>
+              <td>2014.02</td>
+              <td>수상</td>
+              <td>한국수출입은행 봉사단</td>
+              <td>최우수상</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+      </div><!--'stack-post' -->
+      <h3 style="font-family: 'Noto Sans KR';"><b>&nbsp;자기소개서</b></h3>
+      <div class="jumbotron p-4 p-md-5 text-black rounded bg-grey padding-10">
+        <div class="col-md-12 px-0">
+          <h5 style="font-family: 'Noto Sans KR';"><b>다양한 경험을 바탕으로 만족하실 성과를 보여드리겠습니다.</b></h5>
+          <p> 
+          대학시절에는 편입 공부를 하면서 기초과학에 대한 많은 양의 학습을 하였고,
+          수학강사, 트레이너 등 다양한 아르바이트를 경험하였습니다.
+          현재 재직 중인 회사에서는 자동차 분야를 선도하는 브랜드의 기술력을 
+          교육하고 자료를 만드는 일을 하면서 복잡하고 어려운 지식을 가공하여, 
+          요구에 맞게 신뢰할 수 있도록 전달하는 방법들을 배웠습니다. <br>
+          어느 분야이든 상대방의 요구를 파악해서 문제를 해결해 주는 것이 
+          중요한 스킬이라고 생각합니다. 그동안 쌓아온 니즈 파악, 커뮤니케이션 능력, 
+          최신 기술을 학습하는 능력들을 새롭게 도전하는 프로그래밍 분야에 녹여 내어
+          만족하실만한 성과를 보여드리겠습니다.
+          </p>
+          <h5 style="font-family: 'Noto Sans KR';"><b>뒤늦게 좋아하는 일을 찾아 매일 최선을 다해 매진하는 중입니다.</b></h5>
+          현재 직장에서 그래 왔듯 책, 인터넷, 지인등의 다양한 루트를 통해
+          정보를 최대한 수집하여 저의 것으로 만들기 위해 정리하면서 학습 중입니다.
+          첫 입문 언어는 파이썬 이지만, 컴퓨터 공학적 지식과 언어에 대한 
+          심층적인 이해를 위해 C/C++, MySQL, 정보처리기사를 학습 하였고,
+          매일 조금씩 알고리즘 문제를 풀면서 언어를 직접 생각해서
+          써내려가는 방법을 익히는 중입니다.
+          또한 스택오버플로우나 깃허브 등 외국인들의 소스 코드와 질의 응답 글들을 참고하여
+          코드를 분해, 재조립 하면서 사람들에게 인정받는 코드를 저의 프로그램에 적용하는 연습을
+          하고 있습니다. 이제는 실무에서의 경험이 필요한 시기라고 생각합니다. 
+          신입으로 돌아가 일을 처리하는 방식, 협업 방식, 문화들을 빠르게 흡수하여
+          회사에 기여할 수 있도록 최선을 다하겠습니다.
+          
+        </div>
+      </div>
+    </div><!--'stack-main' -->
+   
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">Notice</h4>
+        <p>Profile 페이지는 프론트엔드의 
+        기초적인 이해를 보여드리기 위해 HTML, CSS, Bootstrap4로 작성하였습니다.</p> 
+        Documents 페이지는 벡엔드 역량을 보여드리기 위해 Django를 활용하여 
+        게시글 CRUD구현과 댓글 기능을 넣었습니다.
+      </div>
+      <br>
+      <div class="p-4">
+        <h4 class="font-italic"><a href="{% url 'stackMain' %}" style="color:000000;">Go to Documents</a></h4>
+      </div>
+      <div class="p-4">
+        <h4 class="font-italic">Elsewhere</h4>
+        <ol class="list-unstyled">
+          <li><a href="https://github.com/jihyeon001">GitHub</a></li>
+          <li><a href="https://common-ground.tistory.com/">TSTORY</a></li>
+          <li><a href="https://www.youtube.com/channel/UC5GmjrBNoHrOmoXUsPM21TA">Youtube</a></li>
+        </ol>
+      </div>
+    </aside><!-- /.stack-sidebar -->
+  </div><!--'row' -->
+</main>
+{% endblock %}
+   

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<title> Main </title>
+<div class="container"><!--"container"-->
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark" style="background-image: url({% static 'images/wave2.jpg'%})">
+    <div class="col-md-12 px-0">
+      <h1 class="display-4 font-italic">Thank you for visit my website</h1>
+      <p class="lead my-3">I've had a lot of experiences in my last 20s.<br> 
+      Now, I want to challenge myself in a new field based on that experience.<br>
+      This website is designed to express my spirit of challenge and passion.<br>
+      I organized a brief profile and what I've learned in the form of a blog.<br>
+      You can comment on a post. I'd appreciate it if you could comment on my feedback.<br>
+      Please note that comments in each post cannot be modified or deleted.</p>
+      <p class="lead mb-0"><a class="text-white font-weight-bold">Jihyeon Jeon</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Profile</strong>
+          <h3 class="mb-0">Jihyeon Jeon</h3>
+          <div class="mb-1 text-muted">Sep 25, 1991</div>
+          <p class="card-text mb-auto">Dong-A University, Electrical Engineering<br>
+          981, Jungang-daero, Busanjin-gu, Busan <br>
+          010-2512-9030</p>
+          <a href="{% url 'profile' %}" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="{% static 'images/myprofile.jpg'%}" width="190" height="250"></img>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Documents</strong>
+          <h3 class="mb-0">Knowledge Docs</h3>
+          <div class="mb-1 text-muted">Jun 11, 2020</div>
+          <p class="mb-auto">These are the materials that I organized <br>
+          while studying programming language,<br>
+          Machine learning, Web, Certificate.</p>
+          <a href="{% url 'stackMain' %}" class="stretched-link">View all documents</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="{% static 'images/books.jpg'%}" width="190" height="250"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-secondary" style="background-image: url({% static 'images/sky2.jpg'%})">
+    <div class="col-md-12 px-0">
+      <h3 class="display-4 font-italic">Please remember my passion.</h3>
+      <p class="lead my-3">I will make a contribution by utilizing my experiences below.<br>
+      1. Four-year career in current job.<br>
+      2. Studying for transfer exam for 2 years when I was in college.<br>
+      3. Experience of teaching high school math,<br>
+      4. Development knowledge that I have studied everyday for more than half a year.<br>
+      </p>
+    </div>
+  </div>
+
+</div><!--"container"-->
+{% endblock %}
