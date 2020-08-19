@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<title> Search </title>
+<main role="main" class="container">
+  <div class="row">
+  
+    <div class="col-md-8 blog-main">
+      {% for item in items %}
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col-auto d-none d-lg-block">
+          <img src="{{item.image}}" width="190" height="250"></img>
+        </div>
+
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary"></strong>
+          <div class="mb-1 text-muted">{{ item.category1 }}>{{ item.category2 }}>{{ item.category3 }}>{{ item.category4 }}</div>
+          <p class="card-text mb-auto">
+          <b>{{ item.title|safe }}</b><br>
+          <br>
+          최저가 : {{ item.lprice }}원<br>
+          브랜드 : {{ item.brand }}<br>
+          제조사 : {{ item.maker }}</p>
+          <br>
+          <a href="https://search.shopping.naver.com/detail/detail.nhn?nvMid={{ item.productId }}" class="stretched-link">더 알아보기</a>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div><!--'search' -->
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">About</h4>
+        <p>네이버 Open API를 이용해 쇼핑 검색 결과 중 상위 3개가 표시되도록 구현했습니다.</p> 
+
+      </div>
+
+      <div class="p-4">
+        <h4 class="font-italic">Elsewhere</h4>
+        <ol class="list-unstyled">
+          <li><a href="https://github.com/jihyeon001">GitHub</a></li>
+          <li><a href="https://common-ground.tistory.com/">TSTORY</a></li>
+          <li><a href="https://www.youtube.com/channel/UC5GmjrBNoHrOmoXUsPM21TA">Youtube</a></li>
+        </ol>
+      </div>
+
+    </aside><!-- search-sidebar -->
+  </div><!--'row' -->
+</main><!-- /.container -->
+{% endblock %}

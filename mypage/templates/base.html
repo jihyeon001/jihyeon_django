@@ -36,6 +36,18 @@
       <a class="p-2 text-muted" href="{% url 'main' %}">Main</a>
       <a class="p-2 text-muted" href="{% url 'profile' %}">Profile</a>
       <a class="p-2 text-muted" href="{% url 'stackMain' %}">Documents</a>
+
+      
+      <form class="form-inline" action="{% url 'api_search' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputPassword2" class="sr-only">Search</label>
+          <input type="text" name="q" class="form-control" placeholder="Naver Shopping">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+      </form>
+
+      
     </nav>
   </div>
     </div> <!--"container"-->

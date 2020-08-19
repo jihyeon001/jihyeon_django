@@ -31,6 +31,7 @@ urlpatterns = [
     path('detail/<int:stack_id>/updateStack/', myresume.views.updateStack, name='updateStack'),
     path('detail/<int:stack_id>/deleteStack/', myresume.views.deleteStack, name='deleteStack'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('search/', myresume.views.search_shop, name='api_search'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
